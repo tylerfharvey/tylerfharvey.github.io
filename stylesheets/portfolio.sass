@@ -1,0 +1,77 @@
+@use 'sass:color'
+
+$w-menu: 16vw
+$w-content: 100vw - $w-menu
+$w-project: ($w-content - 3vw) / 2
+$h-project: 20vw
+$h-content: calc(100vh - 2vw)
+$black: #000 !default
+$border-radius: 0.25rem !default
+$box-shadow: 0 0.5rem 1rem $black !default
+$hue: 190
+$saturation: 100
+$lightness: 50
+$color100: #000
+
+$c-menu: $color100
+$c-content: color.adjust($color100, $lightness: 60)
+$c-project: color.adjust($color100, $lightness: 20)
+$c-projecth: color.adjust($color100, $lightness: 40)
+
+
+body
+  margin: 0
+  user-select: none
+  font-family: 'Roboto', sans-serif
+a 
+  color: inherit 
+img
+  height: $h-project
+  width: $w-project
+  border-radius: $border-radius
+span
+  display: block
+  
+#main
+  display: flex
+  #m-menu
+    width: $w-menu
+    height: 100vh
+    background-color: $c-menu
+  #m-content
+    width: $w-content
+    height: 100vh    
+    background-color: $c-content
+    #mc-grid::-webkit-scrollbar
+      display: none  
+    #mc-grid
+      padding: 1vw
+      height: $h-content
+      display: grid
+      overflow-y: scroll
+      grid-template-columns: $w-project $w-project
+      grid-template-rows: $h-project $h-project $h-project
+      grid-gap: 1vw
+      -ms-overflow-style: none
+      .project
+        background-color: $c-project
+        border-radius: $border-radius
+        box-shadow: $box-shadow
+        transition: 1s
+        position: relative
+      .project:hover
+        background-color: $c-projecth
+        -webkit-transform: scale(1.02)
+        -moz-transform:    scale(1.02)
+        -o-transform:      scale(1.02)
+        -ms-transform:     scale(1.02)
+      .project-title
+        position: absolute
+        width: $w-project
+        height: $h-project
+        text-align: center
+        font-size: 2vw
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center

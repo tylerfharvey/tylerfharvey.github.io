@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  height: 20vw;
+  width: 40.5vw;
+  border-radius: 0.25rem;
+}
+
+span {
+  display: block;
+}
+
+#main {
+  display: flex;
+}
+#main #m-menu {
+  width: 16vw;
+  height: 100vh;
+  background-color: #000;
+}
+#main #m-content {
+  width: 84vw;
+  height: 100vh;
+  background-color: #999999;
+}
+#main #m-content #mc-grid::-webkit-scrollbar {
+  display: none;
+}
+#main #m-content #mc-grid {
+  padding: 1vw;
+  height: calc(100vh - 2vw);
+  display: grid;
+  overflow-y: scroll;
+  grid-template-columns: 40.5vw 40.5vw;
+  grid-template-rows: 20vw 20vw 20vw;
+  grid-gap: 1vw;
+  -ms-overflow-style: none;
+}
+#main #m-content #mc-grid .project {
+  background-color: #333333;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem #000;
+  transition: 1s;
+  position: relative;
+}
+#main #m-content #mc-grid .project:hover {
+  background-color: #666666;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+}
+#main #m-content #mc-grid .project-title {
+  position: absolute;
+  width: 40.5vw;
+  height: 20vw;
+  text-align: center;
+  font-size: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=portfolio.css.map */
