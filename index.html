@@ -1,39 +1,90 @@
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="./stylesheets/portfolio.css" rel="stylesheet">
-</head>
-<body>
-  <div id='main'>
-    <div id='m-menu'>
-    </div>
-    <div id='m-content'>
-      <div id='mc-grid'>
-        <a href='./projects/atl-map/atl-map.html' target="_blank">
-          <div class='project'>
-            <div class='project-title'><span>Atlanta Public Schools Clusters</span><span>and Charter Elementary School Map</span></div>
-            <picture>
-              <source type="image/webp" srcset="https://shots.codepen.io/username/pen/OJgGGjN-1280.webp?version=1635810904">
-              <img class="ItemPreviewImage-module_root-23198" alt="Atl Maps" loading="lazy" src="https://shots.codepen.io/username/pen/OJgGGjN-1280.jpg?version=1635810904">
-            </picture>
-          </div>
-        </a>
-        <a href='./projects/project-app/index.html' target="_blank">
-          <div class='project'>
-            <div class='project-title'><span>Project Tracking Application</span></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/THLogoG.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/THLogoG.svg" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-          </div>
-        </a>
-        <a href='./projects/react-p/build/static/index.html' target="_blank">
-          <div class='project'>
-            <div class='project-title'><span>React Sample Application</span></div>
-          </div>
-        </a>
-        <div class='project'>hello</div>
-        <div class='project'></div>
-        <div class='project'></div>
-      </span>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Tyler F Harvey Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="./stylesheets/portfolio.css" rel="stylesheet">  
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <a href='./projects/atl-map/atl-map.html' target='_blank'></a>
+    <div id='header-container'>
+      <div class='logo-title'>
+        <div class='logodiv'>
+          <img class='logo' src="%PUBLIC_URL%/THLogoG.svg" alt='TH Logo'>
+        </div>
+        <div class='title'>Tyler Harvey</div>
+      </div>
+      <div class='link-container'>
+        <!--div class='link'><a href="#description">Description</a></div-->
+        <div class='link'><a href="#projects">Projects</a></div>
+        <!--div class='link'><a href="#resume">Resume</a></div>
+        <div class='link'><a href="#contact-me">Contact Me</a></div-->
+      </div>
     </div>
-  </div>
-</body>
+    <!--div class='section' id='description'></div-->
+    <div class='section' id='projects'>
+      <div id='m-content'>
+        <div id='mc-grid'>
+          <a href='./atl-map.html' target="_blank">
+            <div class='project'>
+              <div class='project-title'><span>Atlanta Public Schools Clusters</span><span>and Charter Elementary School Map</span></div>
+              <picture>
+                <source type="image/webp" srcset="https://shots.codepen.io/username/pen/OJgGGjN-1280.webp?version=1635810904">
+                <img class="p-img ItemPreviewImage-module_root-23198" alt="Atl Maps" loading="lazy" src="https://shots.codepen.io/username/pen/OJgGGjN-1280.jpg?version=1635810904">
+              </picture>
+            </div>
+          </a>
+          <a href='./cprojects' target="_blank">
+            <div class='project'>
+              <div class='project-title'><span>Engineering Project Tracking</span><span>Application</span></div>
+              <picture>
+                <source type="image/webp" srcset="https://shots.codepen.io/username/pen/OJgGGjN-1280.webp?version=1635810904">
+                <img class="p-img ItemPreviewImage-module_root-23198" alt="Atl Maps" loading="lazy" src="https://shots.codepen.io/username/pen/OJgGGjN-1280.jpg?version=1635810904">
+              </picture>
+            </div>
+          </a>
+          <div class='project'></div>
+          <div class='project'></div>
+          <div class='project'></div>
+          <div class='project'></div>
+      </div>
+    </div>
+    <!--div class='section' id='resume'></div>
+    <div class='section' id='contact-me'></div-->
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
