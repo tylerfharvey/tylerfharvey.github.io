@@ -1,0 +1,27 @@
+{
+  "name": "tylerfharvey.github.io",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerfharvey/tylerfharvey.github.io.git"
+  },
+  "author": "tylerfharvey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tylerfharvey/tylerfharvey.github.io/issues"
+  },
+  "homepage": "https://github.com/tylerfharvey/tylerfharvey.github.io#readme",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "install": "^0.13.0",
+    "npm": "^8.3.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
