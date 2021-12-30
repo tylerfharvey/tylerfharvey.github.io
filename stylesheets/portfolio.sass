@@ -14,6 +14,9 @@ span
   display: block
 
 
+html::-webkit-scrollbar 
+    width: 0  /* Remove scrollbar space */
+    background: transparent  /* Optional: just make scrollbar invisible */
 
 .App 
   text-align: center
@@ -83,8 +86,8 @@ span
       font-size: 16px
       color:#aaa
 .section
-  padding-top: 56px
   height: 100vh
+  padding-top: 56px
 #description
   background-color: #444
 #projects
@@ -106,10 +109,10 @@ $p-col: 2
 $w-content: 100vw
 $w-project: ($w-content - 3vw) / 2
 $h-project: 30vw
-$h-content: calc(100vh - 2vw)
+$h-content: calc(100vh - 56px)
 $black: #000 !default
 $border-radius: 0.25rem !default
-$box-shadow: 0 0.5rem 1rem $black !default
+$box-shadow: 0 0 1rem $black !default
 $hue: 190
 $saturation: 100
 $lightness: 50
@@ -117,29 +120,38 @@ $color100: #000000
 
 $c-menu: $color100
 $c-content: color.adjust($color100, $lightness: 60)
-$c-project: color.adjust($color100, $lightness: 20)
-$c-projecth: color.adjust($color100, $lightness: 40)
+$c-project: color.adjust($color100, $lightness: 40)
+$c-projecth: color.adjust($color100, $lightness: 50)
 
 
-  
+
+i
+  font-size: 6vw
+#m-content::-webkit-scrollbar
+  display: none  
 #m-content
   width: $w-content
   height: 100vh    
   background-color: $c-content
+  margin: 0 auto
+  overflow-y: scroll
+  -ms-overflow-style: none
   #mc-grid::-webkit-scrollbar
     display: none  
   #mc-grid
     padding: 1vw
+    margin: 0 auto
     height: $h-content
     display: grid
-    overflow-y: scroll
     grid-template-columns: $w-project $w-project
     grid-template-rows: $h-project $h-project $h-project
     grid-gap: 1vw
-    -ms-overflow-style: none
     .project
       background-color: $c-project
+      width: $w-project
+      height: $h-project
       border-radius: $border-radius
+      border-radius: 0
       box-shadow: $box-shadow
       transition: 1s
       position: relative
@@ -150,16 +162,64 @@ $c-projecth: color.adjust($color100, $lightness: 40)
       -o-transform:      scale(1.02)
       -ms-transform:     scale(1.02)
     .project-title
-      position: absolute
-      width: $w-project
       height: $h-project
       text-align: center
-      font-size: 2vw
       display: flex
-      flex-direction: column
       justify-content: center
       align-items: center
+      height: $h-project * 0.25
+      .project-title-text
+        font-size: 4vw
+    .project-stack
+      height: $h-project * 0.25
+      display: flex
+      justify-content: center
+      align-items: center
+    .project-descr
+      height: auto
+      text-align: center        
+      font-size: 2.5vw
+      padding: 1vw 2vw
     .p-img
       height: $h-project
       width: $w-project
+      height: 0
+      width: 0
       border-radius: $border-radius
+
+
+@media (min-width: 1020px) 
+  $w-content: 1020px
+  $w-project: 490px
+  $h-content: calc(100vh - 56px)
+  $h-project: 300px
+  i
+    font-size: 60px
+  #m-content
+    width: 100%
+    height: $h-content
+    #mc-grid
+      padding: 10px 30px
+      width: 990px
+      grid-template-columns: $w-project $w-project
+      grid-template-rows: $h-project $h-project $h-project
+      grid-gap: 10px
+      .project
+        width: $w-project
+        height: $h-project
+      .project-title
+        height: $h-project * 0.25
+        .project-title-text
+          font-size: 40px
+      .project-stack
+        height: $h-project * 0.25
+      .project-descr
+        height: auto
+        font-size: 25px
+        padding: 10px 20px
+      .p-img
+        height: $h-project
+        width: $w-project
+        height: 0
+        width: 0
+        border-radius: $border-radius

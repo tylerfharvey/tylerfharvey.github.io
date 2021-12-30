@@ -17,6 +17,11 @@ span {
   display: block;
 }
 
+html::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
 .App {
   text-align: center;
 }
@@ -106,8 +111,8 @@ span {
 }
 
 .section {
-  padding-top: 56px;
   height: 100vh;
+  padding-top: 56px;
 }
 
 #description {
@@ -126,51 +131,121 @@ span {
   background-color: #888;
 }
 
+i {
+  font-size: 6vw;
+}
+
+#m-content::-webkit-scrollbar {
+  display: none;
+}
+
 #m-content {
   width: 100vw;
   height: 100vh;
   background-color: #999999;
+  margin: 0 auto;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
 }
 #m-content #mc-grid::-webkit-scrollbar {
   display: none;
 }
 #m-content #mc-grid {
   padding: 1vw;
-  height: calc(100vh - 2vw);
+  margin: 0 auto;
+  height: calc(100vh - 56px);
   display: grid;
-  overflow-y: scroll;
   grid-template-columns: 48.5vw 48.5vw;
   grid-template-rows: 30vw 30vw 30vw;
   grid-gap: 1vw;
-  -ms-overflow-style: none;
 }
 #m-content #mc-grid .project {
-  background-color: #333333;
+  background-color: #666666;
+  width: 48.5vw;
+  height: 30vw;
   border-radius: 0.25rem;
-  box-shadow: 0 0.5rem 1rem #000;
+  border-radius: 0;
+  box-shadow: 0 0 1rem #000;
   transition: 1s;
   position: relative;
 }
 #m-content #mc-grid .project:hover {
-  background-color: #666666;
+  background-color: gray;
   -webkit-transform: scale(1.02);
   -moz-transform: scale(1.02);
   -o-transform: scale(1.02);
   -ms-transform: scale(1.02);
 }
 #m-content #mc-grid .project-title {
-  position: absolute;
-  width: 48.5vw;
   height: 30vw;
   text-align: center;
-  font-size: 2vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 7.5vw;
+}
+#m-content #mc-grid .project-title .project-title-text {
+  font-size: 4vw;
+}
+#m-content #mc-grid .project-stack {
+  height: 7.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#m-content #mc-grid .project-descr {
+  height: auto;
+  text-align: center;
+  font-size: 2.5vw;
+  padding: 1vw 2vw;
 }
 #m-content #mc-grid .p-img {
   height: 30vw;
   width: 48.5vw;
+  height: 0;
+  width: 0;
   border-radius: 0.25rem;
+}
+
+@media (min-width: 1020px) {
+  i {
+    font-size: 60px;
+  }
+
+  #m-content {
+    width: 100%;
+    height: calc(100vh - 56px);
+  }
+  #m-content #mc-grid {
+    padding: 10px 30px;
+    width: 990px;
+    grid-template-columns: 490px 490px;
+    grid-template-rows: 300px 300px 300px;
+    grid-gap: 10px;
+  }
+  #m-content #mc-grid .project {
+    width: 490px;
+    height: 300px;
+  }
+  #m-content #mc-grid .project-title {
+    height: 75px;
+  }
+  #m-content #mc-grid .project-title .project-title-text {
+    font-size: 40px;
+  }
+  #m-content #mc-grid .project-stack {
+    height: 75px;
+  }
+  #m-content #mc-grid .project-descr {
+    height: auto;
+    font-size: 25px;
+    padding: 10px 20px;
+  }
+  #m-content #mc-grid .p-img {
+    height: 300px;
+    width: 490px;
+    height: 0;
+    width: 0;
+    border-radius: 0.25rem;
+  }
 }/*# sourceMappingURL=portfolio.css.map */
