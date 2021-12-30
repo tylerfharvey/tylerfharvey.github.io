@@ -112,7 +112,9 @@ html::-webkit-scrollbar {
 
 .section {
   height: 100vh;
-  padding-top: 56px;
+}
+.section .section-spacer {
+  height: 56px;
 }
 
 #description {
