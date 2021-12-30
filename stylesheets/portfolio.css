@@ -133,14 +133,6 @@ html::-webkit-scrollbar {
   background-color: #888;
 }
 
-#picture1 {
-  display: none;
-}
-
-#header-container:hover #picture1 {
-  display: block;
-}
-
 i {
   font-size: 6vw;
 }
