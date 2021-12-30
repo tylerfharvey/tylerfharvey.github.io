@@ -87,7 +87,7 @@ html::-webkit-scrollbar {
   padding-top: 2px;
   padding-left: 4px;
   padding-right: 12px;
-  disply: flex;
+  display: flex;
   align-items: bottom;
 }
 #header-container .logo-title .logo {
@@ -171,6 +171,7 @@ i {
 }
 #m-content #mc-grid .project:hover {
   background-color: gray;
+  transform: scale(1.02);
   -webkit-transform: scale(1.02);
   -moz-transform: scale(1.02);
   -o-transform: scale(1.02);
