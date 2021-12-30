@@ -99,9 +99,16 @@ html::-webkit-scrollbar
   background-color: #888
 
 
+//Show Preview
+//------------------------------------------------//
+//------------------------------------------------//
+#picture1
+  display: none
+#header-container:hover
+  #picture1
+    display: block
 
-//------------------------------------------------//
-//------------------------------------------------//
+
 //Projects Detail
 //------------------------------------------------//
 //------------------------------------------------//
@@ -145,7 +152,7 @@ i
     height: $h-content
     display: grid
     grid-template-columns: $w-project $w-project
-    grid-template-rows: $h-project $h-project $h-project
+    grid-template-rows: $h-project $h-project $h-project $h-project/2
     grid-gap: 1vw
     .project
       background-color: $c-project
@@ -188,6 +195,32 @@ i
       height: 0
       width: 0
       border-radius: $border-radius
+    .otherprojects
+      grid-column-start: 1
+      grid-column-end: 3
+      background-color: $c-project
+      height: $h-project / 2
+      box-shadow: $box-shadow
+      transition: 1s
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    .otherprojects:hover
+      background-color: $c-projecth
+      transform:         scale(1.02)
+      -webkit-transform: scale(1.02)
+      -moz-transform:    scale(1.02)
+      -o-transform:      scale(1.02)
+      -ms-transform:     scale(1.02)
+    .opt
+      font-size: 4vw
+    .opi
+      display: flex
+      justify-content: center
+      align-items: center
+
 
 
 @media (min-width: 1020px) 
@@ -225,3 +258,8 @@ i
         height: 0
         width: 0
         border-radius: $border-radius
+      .otherprojects
+        height: 150px
+      .opt
+        font-size: 40px
+      .opi
